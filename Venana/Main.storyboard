@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aZs-Ew-49u">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="rYe-Vg-mNO">
+            <objects>
+                <viewController id="aZs-Ew-49u" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bjo-l4-lLG"/>
+                        <viewControllerLayoutGuide type="bottom" id="AwD-pR-y9v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IZP-J9-FaM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRP-3C-xU1">
+                                <rect key="frame" x="0.0" y="219" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="iCo-0J-j4J"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="aZs-Ew-49u" id="X0Q-pS-irF"/>
+                                    <outlet property="delegate" destination="aZs-Ew-49u" id="uJW-vg-Ldy"/>
+                                </connections>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5z-k2-GA6" userLabel="input System Picker View" customClass="SystemPickerView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Opz-rb-snl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJX-HE-TqE" userLabel="output System Picker View" customClass="SystemPickerView">
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3HI-U6-xna"/>
+                                    <constraint firstAttribute="height" constant="100" id="zeY-7G-kae"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3HI-U6-xna"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaZ-OY-dXv" customClass="ZeroOneButton">
+                                <rect key="frame" x="0.0" y="230" width="600" height="140"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="yiU-NO-nur"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvc-B0-K3i" userLabel="inputText">
+                                <rect key="frame" x="0.0" y="128" width="600" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Ziv-5j-I51"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRo-bi-uS9" userLabel="outputText">
+                                <rect key="frame" x="0.0" y="412" width="600" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="7PO-A3-gNO"/>
+                                    <constraint firstAttribute="height" constant="80" id="CHN-WR-Xqg"/>
+                                    <constraint firstAttribute="height" constant="80" id="jOa-3A-MWg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="33"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.3353600913402574" green="0.37383283124306643" blue="0.56145438762626265" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7PO-A3-gNO"/>
+                                        <exclude reference="CHN-WR-Xqg"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28627450980392155" green="0.72156862745098038" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SRo-bi-uS9" firstAttribute="trailing" secondItem="IZP-J9-FaM" secondAttribute="trailingMargin" constant="-16" id="6JP-vP-tXr"/>
+                            <constraint firstItem="zvc-B0-K3i" firstAttribute="leading" secondItem="IZP-J9-FaM" secondAttribute="leadingMargin" constant="-16" id="Cd1-gL-2yy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SRo-bi-uS9" secondAttribute="trailing" constant="-16" id="HK0-sD-kFC"/>
+                            <constraint firstItem="pJX-HE-TqE" firstAttribute="leading" secondItem="IZP-J9-FaM" secondAttribute="leadingMargin" constant="-16" id="IUn-5A-nyM"/>
+                            <constraint firstItem="SRo-bi-uS9" firstAttribute="leading" secondItem="IZP-J9-FaM" secondAttribute="leadingMargin" constant="-16" id="Icx-ze-J4m"/>
+                            <constraint firstItem="Q5z-k2-GA6" firstAttribute="top" secondItem="Bjo-l4-lLG" secondAttribute="bottom" id="IeF-06-ICc"/>
+                            <constraint firstItem="UaZ-OY-dXv" firstAttribute="top" secondItem="zvc-B0-K3i" secondAttribute="bottom" constant="8" id="NtE-na-Fm5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UaZ-OY-dXv" secondAttribute="trailing" constant="-16" id="O6g-sP-uLf"/>
+                            <constraint firstItem="Q5z-k2-GA6" firstAttribute="leading" secondItem="IZP-J9-FaM" secondAttribute="leadingMargin" constant="-16" id="Q1o-KQ-Csu"/>
+                            <constraint firstAttribute="centerY" secondItem="cRP-3C-xU1" secondAttribute="centerY" id="Sbf-Zp-T9a"/>
+                            <constraint firstItem="SRo-bi-uS9" firstAttribute="leading" secondItem="IZP-J9-FaM" secondAttribute="leadingMargin" constant="-16" id="T1M-pT-fZm"/>
+                            <constraint firstItem="pJX-HE-TqE" firstAttribute="top" secondItem="SRo-bi-uS9" secondAttribute="bottom" constant="8" id="TXL-Ji-pKW"/>
+                            <constraint firstItem="pJX-HE-TqE" firstAttribute="top" secondItem="SRo-bi-uS9" secondAttribute="bottom" constant="8" id="UmI-bi-DF3"/>
+                            <constraint firstItem="UaZ-OY-dXv" firstAttribute="leading" secondItem="IZP-J9-FaM" secondAttribute="leadingMargin" constant="-16" id="WZT-ic-64a"/>
+                            <constraint firstItem="zvc-B0-K3i" firstAttribute="top" secondItem="Q5z-k2-GA6" secondAttribute="bottom" constant="8" id="chN-vr-qds"/>
+                            <constraint firstItem="cRP-3C-xU1" firstAttribute="leading" secondItem="IZP-J9-FaM" secondAttribute="leadingMargin" constant="-16" id="ck1-f9-kum"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zvc-B0-K3i" secondAttribute="trailing" constant="-16" id="hO3-0N-iZu"/>
+                            <constraint firstItem="AwD-pR-y9v" firstAttribute="top" secondItem="pJX-HE-TqE" secondAttribute="bottom" id="hi2-jg-PHt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pJX-HE-TqE" secondAttribute="trailing" constant="-16" id="it6-RC-Re9"/>
+                            <constraint firstAttribute="centerY" secondItem="UaZ-OY-dXv" secondAttribute="centerY" id="mzV-I1-3EB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q5z-k2-GA6" secondAttribute="trailing" constant="-16" id="sUw-5v-tDw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cRP-3C-xU1" secondAttribute="trailing" constant="-16" id="zPp-wK-V21"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NtE-na-Fm5"/>
+                                <exclude reference="6JP-vP-tXr"/>
+                                <exclude reference="Icx-ze-J4m"/>
+                                <exclude reference="TXL-Ji-pKW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="inputSystemPickerView" destination="Q5z-k2-GA6" id="d6J-hJ-dem"/>
+                        <outlet property="inputTextButton" destination="zvc-B0-K3i" id="bsq-ld-D7A"/>
+                        <outlet property="numberPicker" destination="cRP-3C-xU1" id="aqT-Bc-BMm"/>
+                        <outlet property="outputSystemPickerView" destination="pJX-HE-TqE" id="LGo-Fk-B5u"/>
+                        <outlet property="outputTextButton" destination="SRo-bi-uS9" id="6Mp-wv-u06"/>
+                        <outlet property="zeroOneButton" destination="UaZ-OY-dXv" id="Uc7-hN-bZ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xh5-Qe-Fgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309" y="399"/>
+        </scene>
+    </scenes>
+</document>
