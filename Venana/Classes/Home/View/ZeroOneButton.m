@@ -13,6 +13,9 @@
 
 #import "ZeroOneButton.h"
 #import "UIView+Extension.h"
+#import <AudioToolbox/AudioToolbox.h>
+
+static SystemSoundID shake_sound_male_id = 0;
 
 @interface ZeroOneButton ()
 @property (nonatomic, weak) UIButton *oneButton;
@@ -59,9 +62,27 @@
 }
 
 - (void)zeroOneButtonClick:(UIButton *)button{
+    //播放声音
+    [self playSound];
     if([self.delegate respondsToSelector:@selector(ZeroOneButton:didClickButtonWithType:)]){
         [self.delegate ZeroOneButton:self didClickButtonWithType:(ZeroOneButtonType)button.tag];
     }
+}
+
+-(void) playSound
+
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"keyPress" ofType:@"wav"];
+    if (path) {
+        //注册声音到系统
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path],&shake_sound_male_id);
+        AudioServicesPlaySystemSound(shake_sound_male_id);
+        //        AudioServicesPlaySystemSound(shake_sound_male_id);//如果无法再下面播放，可以尝试在此播放
+    }
+//    
+//    AudioServicesPlaySystemSound(shake_sound_male_id);   //播放注册的声音，（此句代码，可以在本类中的任意位置调用，不限于本方法中）
+//    
+//    //    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);   //让手机震动
 }
 
 

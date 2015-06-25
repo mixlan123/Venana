@@ -30,4 +30,5 @@ typedef enum {
 @interface SystemPickerView : UIView
 @property (nonatomic, weak) id<SystemPickerViewDelegate> delegate;
 @property (nonatomic, assign) SystemPickerViewSystemName selectSystemName;
+@property (nonatomic, assign) SystemPickerViewSystemName defaultSystemName;
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E661FA0F1B2A92FB00ACD712 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E661FA0C1B2A92FB00ACD712 /* Default-568h@2x.png */; };
+		E661FA101B2A92FB00ACD712 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E661FA0D1B2A92FB00ACD712 /* Default.png */; };
+		E661FA111B2A92FB00ACD712 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E661FA0E1B2A92FB00ACD712 /* Default@2x.png */; };
 		E68D6B541B24733000181BF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E68D6B531B24733000181BF8 /* Images.xcassets */; };
 		E68D6B571B24733000181BF8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E68D6B551B24733000181BF8 /* LaunchScreen.xib */; };
 		E68D6B631B24733000181BF8 /* VenanaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E68D6B621B24733000181BF8 /* VenanaTests.m */; };
@@ -18,6 +21,8 @@
 		E68D6B821B24737000181BF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E68D6B7C1B24737000181BF8 /* main.m */; };
 		E68D6B841B2473D300181BF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68D6B831B2473D300181BF8 /* Main.storyboard */; };
 		E68D6B881B25C3C800181BF8 /* SystemConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = E68D6B871B25C3C800181BF8 /* SystemConvert.m */; };
+		E68D6B8A1B28072C00181BF8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68D6B891B28072C00181BF8 /* AudioToolbox.framework */; };
+		E68D6B8C1B28501100181BF8 /* keyPress.wav in Resources */ = {isa = PBXBuildFile; fileRef = E68D6B8B1B28501100181BF8 /* keyPress.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E661FA0C1B2A92FB00ACD712 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E661FA0D1B2A92FB00ACD712 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E661FA0E1B2A92FB00ACD712 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E68D6B431B24733000181BF8 /* Venana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68D6B471B24733000181BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E68D6B531B24733000181BF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -52,6 +60,8 @@
 		E68D6B831B2473D300181BF8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E68D6B861B25C3C800181BF8 /* SystemConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemConvert.h; sourceTree = "<group>"; };
 		E68D6B871B25C3C800181BF8 /* SystemConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemConvert.m; sourceTree = "<group>"; };
+		E68D6B891B28072C00181BF8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E68D6B8B1B28501100181BF8 /* keyPress.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = keyPress.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68D6B8A1B28072C00181BF8 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +86,7 @@
 		E68D6B3A1B24733000181BF8 = {
 			isa = PBXGroup;
 			children = (
+				E68D6B891B28072C00181BF8 /* AudioToolbox.framework */,
 				E68D6B451B24733000181BF8 /* Venana */,
 				E68D6B5F1B24733000181BF8 /* VenanaTests */,
 				E68D6B441B24733000181BF8 /* Products */,
@@ -105,6 +117,10 @@
 		E68D6B461B24733000181BF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E661FA0C1B2A92FB00ACD712 /* Default-568h@2x.png */,
+				E661FA0D1B2A92FB00ACD712 /* Default.png */,
+				E661FA0E1B2A92FB00ACD712 /* Default@2x.png */,
+				E68D6B8B1B28501100181BF8 /* keyPress.wav */,
 				E68D6B471B24733000181BF8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -244,6 +260,7 @@
 				TargetAttributes = {
 					E68D6B421B24733000181BF8 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = CP88FZGD22;
 					};
 					E68D6B5B1B24733000181BF8 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -276,7 +293,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E68D6B841B2473D300181BF8 /* Main.storyboard in Resources */,
+				E661FA101B2A92FB00ACD712 /* Default.png in Resources */,
 				E68D6B571B24733000181BF8 /* LaunchScreen.xib in Resources */,
+				E68D6B8C1B28501100181BF8 /* keyPress.wav in Resources */,
+				E661FA0F1B2A92FB00ACD712 /* Default-568h@2x.png in Resources */,
+				E661FA111B2A92FB00ACD712 /* Default@2x.png in Resources */,
 				E68D6B541B24733000181BF8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,9 +440,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Venana/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -429,9 +454,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Venana/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -488,6 +517,7 @@
 				E68D6B681B24733000181BF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E68D6B691B24733000181BF8 /* Build configuration list for PBXNativeTarget "VenanaTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +526,7 @@
 				E68D6B6B1B24733000181BF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -99,7 +99,7 @@
 
 - (void)setDelegate:(id<SystemPickerViewDelegate>)delegate{
     _delegate = delegate;
-    [self systemButtonClick:self.bSystemButton];
+//    [self systemButtonClick:self.bSystemButton];
 }
 
 - (void)layoutSubviews{
@@ -128,9 +128,16 @@
     CGFloat hX = CGRectGetMaxX(self.dSystemButton.frame) + perSpace;
     self.hSystemButton.frame = CGRectMake(hX, buttonY, buttonW, buttonH);
     
-    self.selectedBgView.center = self.bSystemButton.center;
-    [self.bSystemButton setTitleColor:kMainColor forState:UIControlStateNormal];
-    self.lastSelectedButton = self.bSystemButton;
-    self.selectSystemName = SystemPickerViewSystemNameB;
+    UIButton *shouldSelectButton = nil;
+    if(self.defaultSystemName == SystemPickerViewSystemNameD){
+        shouldSelectButton = self.dSystemButton;
+    }else{
+        shouldSelectButton = self.bSystemButton;
+    }
+    
+    self.selectedBgView.center = shouldSelectButton.center;
+    [shouldSelectButton setTitleColor:kMainColor forState:UIControlStateNormal];
+    self.lastSelectedButton = shouldSelectButton;
+    self.selectSystemName = (SystemPickerViewSystemName)shouldSelectButton.tag;
 }
 @end
